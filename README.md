@@ -17,3 +17,13 @@ npm install -g grunt grunt-cli gulp bower
 ### Recommended Editors:
 Sublime Text 2 (http://www.sublimetext.com/)<br>
 Visual Studio Code (https://code.visualstudio.com/)
+
+### Building the application
+```
+grunt build
+```
+### Running the application
+```
+grunt serve
+```
+
