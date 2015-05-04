@@ -1,0 +1,98 @@
+﻿<div class="row masonry-container">
+    <div class="grid-sizer"></div>
+    <div class="gutter-sizer"></div>
+    <div class="item two-columns single-card opaque" data-cardid="4836553578774528">
+        <!-- PERSON CARDS -->
+        <div class="bl-person" data-block="person">
+            <div class="bl-person-header">
+                <img class="bl-person-background" src="{{profileCard.personImageBanner}}">
+                <img class="bl-person-image" src="{{profileCard.personPhoto}}">
+            </div>
+            <div class="bl-person-data">
+                <h2 class="bl-person-name">{{profileCard.personName}}</h2><p class="bl-person-title">{{profileCard.personTitle}}</p>
+            </div>
+        </div>
+        <div class="bl-contact" data-block="contact">
+            <div class="bl-contact-left">
+                <h4 class="bl-contact-title">Contacts</h4><a class="bl-contact-email" href="mailto:{{profileCard.contactEmail}}" target="_blank">{{profileCard.contactEmail}}</a>
+                <a class="bl-contact-tel general-mobile-tel" href="tel:{{profileCard.mobileTel}}">{{profileCard.mobileTel}}</a>
+            </div>
+            <div class="bl-contact-right">
+                <h4 class="bl-contact-title">Location</h4>
+                <p class="bl-contact-location">{{profileCard.contactLocation}}</p>
+            </div>
+        </div>
+        <div class="bl-manager" data-block="manager">
+            <div class="bl-manager-right">
+                <h4 class="bl-manager-title">Coach</h4>
+                <a data-card="open-route" href="/u/{{profileCard.managerLogin}} class=" bl-manager-name">{{profileCard.managerName}}</a>
+            </div>
+            <div class="bl-manager-clear"></div>
+        </div>
+        <div class="bl-awards" data-block="awards">
+            <h4 class="bl-awards-title">Awards</h4>
+            <ul class="bl-awards-list">
+                <li ng-repeat="profileAwardItem in profileCard.awards" class="bl-awards-item bl-awards-icon icon{{profileAwardItem.awardId}}">
+                    <h4 class="bl-awards-item-title">{{profileAwardItem.awardTitle}}</h4>
+                    <p class="bl-awards-item-description">{{profileAwardItem.awardDescription}}</p>
+                </li>
+            </ul>
+        </div>
+        <div class="bl-projects" data-block="projects">
+            <h4 class="bl-projects-title">Projects</h4>
+            <h4 class="bl-projects-title-current">Current</h4>
+            <a class="smart-tag-link-item" data-smtag-id="smtag-project-transcanada" href="javascript:void(0);">TransCanada</a>
+        </div>
+        <div class="bl-skills" data-block="skills">
+            <h4 class="bl-skills-title">Skills</h4>
+            <a ng-repeat="smartTagSkills in profileCard.skillTags"  class="smart-tag-link-item" href="javascript:void(0);">{{smartTagSkills.tagLabel}}</a>
+        </div>
+    </div>
+
+    <div ng-repeat="cardItem in cards" on-last-repeat class="item {{cardItem.getClass()}} opaque masonry-card" data-cardid="{{cardItem.cardId}}" data-recommendationrequestid="1392905186">
+        <!-- PERSON CARDS --><!-- OTHER CARDS -->
+        <div class="card-authoring-info">
+            <div class="bl-source" data-block="source">
+                <p class="bl-source-name">{{cardItem.sourceName}}</p>
+            </div>
+            <div class="bl-author" data-block="author">
+                <div class="bl-author-container">
+                    <img class="bl-author-image" src="{{cardItem.authorImageUrl}}">
+                </div>
+                <div class="bl-author-info">
+                    <p class="bl-author-name">
+                        <a data-card="open-route" href="/u/ana">{{cardItem.authorName}}</a>
+                    </p>
+                    <p class="bl-author-date">{{cardItem.authoringDate}}</p>
+                </div>
+            </div>
+        </div>
+        <a href="/card/z13rg33hqzvow3v3w22tvb2rrsqxfzmnf" data-card="open-card">
+            <div class="bl-content" data-block="content">
+                <h1 class="bl-content-title">{{cardItem.contentTitle}}</h1>
+                <p class="bl-content-summary">{{cardItem.contentSummary}}</p>
+            </div>
+            <div class="bl-photo" data-block="photo">
+                <img class="bl-photo-image" src="{{cardItem.contentImageUrl}}" width="100%" height="100%">
+            </div>
+        </a>
+        <div class="bl-ua" data-block="user-activity">
+            <ul class="bl-ua-list">
+                <li class="bl-ua-list-item">
+                    <a class="bl-ua-link-activity bl-ua-link-like   " data-card="link-activity" data-cardactivity="like" href="javascript:void(0);">
+                        <i class="bl-ua-icon bl-ua-icon-like">Like</i>
+                        <span class="bl-ua-counter bl-ua-counter-like" data-card="count-activity" data-cardcountnumber="31">31</span>
+                    </a>
+                </li>
+                <li class="bl-ua-list-item"><a class="bl-ua-link-activity bl-ua-link-dislike   " data-card="link-activity" data-cardactivity="dislike" href="javascript:void(0);"><i class="bl-ua-icon bl-ua-icon-dislike">Dislike</i><span class="bl-ua-counter bl-ua-counter-dislike" data-card="count-activity"></span></a></li>
+                <li class="bl-ua-list-item"><a class="bl-ua-link-pin bl-ua-link-pin   " data-card="link-pin" data-cardactivity="pin" href="javascript:void(0);"><i class="bl-ua-icon bl-ua-icon-pin">Pin</i><span class="bl-ua-counter bl-ua-counter-pin" data-card="count-pin" data-cardcountnumber="0">0</span></a></li>
+                <li class="bl-ua-list-item"><a class="bl-ua-link-share bl-ua-link-share" data-card="link-share" href="javascript:void(0);"><i class="bl-ua-icon bl-ua-icon-share">Share</i><span class="bl-ua-counter bl-ua-counter-share" data-card="count-share" data-cardcountnumber="0">0</span></a></li>
+            </ul>
+            <div class="bl-ua-tooltip" data-card="share-tooltip">
+                <div class="bl-ua-share-by-email">
+                    <a class="bl-ua-share-by-email-link" data-cardshare="email" href="javascript:void(0);">Share it by email</a>
+                </div>
+            </div>
+        </div>
+    </div><!--/row-->
+</div>
