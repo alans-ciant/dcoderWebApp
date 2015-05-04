@@ -12,6 +12,8 @@ After install NodeJS and NPM, run the commands bellow on console:
 npm install typescript@1.5.0-alpha -g
 npm install tsd@0.5.7 -g
 npm install -g grunt grunt-cli gulp bower
+
+npm install & npm dedupe & bower install
 ```
 
 ### Recommended Editors:
